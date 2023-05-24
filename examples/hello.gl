@@ -1,0 +1,4 @@
+task main (): deangit {
+    tv_show("Six season and a movie!");
+    outcome 0;
+}
