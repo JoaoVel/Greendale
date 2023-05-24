@@ -13,6 +13,7 @@ The second half of the project is to implement a Bytecode interpreter in c for b
 - [ ] implement the parser
 - [ ] implement the ast interpreter
 - [ ] implement IO functionality
+- [ ] implement variable assignment
 - [ ] implement if else statement
 - [ ] implement while loop
 - [ ] implement function call
@@ -25,6 +26,6 @@ The second half of the project is to implement a Bytecode interpreter in c for b
 <IO> ::= "tv_show (" <String> ");"
 <String> ::= "\"" <Char> "\""
 <Char> ::= "" | <Num> <Char> | <Letter> <Char>
-<return> ::= "result" <Char> ";"
+<return> ::= "result" <Num> ";" | "result" <String> ";"
 <Type> ::= "Deangit"
 ```
