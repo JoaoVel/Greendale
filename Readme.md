@@ -5,11 +5,11 @@ Greendalelang is a simple imperative language based on the show Community. It is
 At this point in time the language should support a simple hello world program. 
 
 ## Goals
-The goal of the first half of the project is to implement an interpreter in php (cause why not) and extend the language to solve simple problems like the ones described in codechef or codewars.
+The goal of the first half of the project is to implement an interpreter in python and extend the language to solve simple problems like the ones described in codechef or codewars.
 The second half of the project is to implement a Bytecode interpreter in c for better performance.
 
 ## Task List
-- [ ] implement the lexer
+- [X] implement the lexer
 - [ ] implement the parser
 - [ ] implement the ast interpreter
 - [ ] implement IO functionality
@@ -20,10 +20,10 @@ The second half of the project is to implement a Bytecode interpreter in c for b
 
 ## Language description in BNF
 ```
-<Program> ::= <Function>
+<Program> ::= <IO> <expr> | <Function> <expr>
+<expr> ::= "" | <IO> <expr> | <Function> <expr>
 <Function> ::= "task" <FunctionName> "():" <Type> "{" <expr> <return>  "}"
-<expr> ::= "" | <IO> <expr>
-<IO> ::= "tv_show (" <String> ");"
+<IO> ::= "quote" "(" <String> ")" ";"
 <String> ::= "\"" <Char> "\""
 <Char> ::= "" | <Num> <Char> | <Letter> <Char>
 <return> ::= "result" <Num> ";" | "result" <String> ";"

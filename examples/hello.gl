@@ -1,4 +1,6 @@
-task main (): deangit {
-    tv_show("Six season and a movie!");
+task main (): Deangit {
+    quote("Six season and a movie!");
     outcome 0;
 }
+
+main();
